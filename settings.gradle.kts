@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ConventionPluginExample"
 include(":app")
- 
+include(":feature:profile")
+include(":feature:dashboard")
