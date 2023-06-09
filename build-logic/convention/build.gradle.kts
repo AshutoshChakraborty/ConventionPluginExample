@@ -15,3 +15,17 @@ tasks.withType<KotlinCompile>().configureEach {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
+dependencies {
+    compileOnly(libs.android.gradlePlugin)
+    compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
+
+}
+gradlePlugin{
+    plugins {
+        register("androidApplication"){
+            id = "conventionpluginexample.android.application"
+            implementationClass= "AndroidApplicationConventionPlugin"
+        }
+    }
+}
